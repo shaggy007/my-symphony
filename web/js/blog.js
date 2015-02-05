@@ -5,6 +5,7 @@ $('.remove-btn').click(
 
 		e.preventDefault();
 		var action = $(this).attr('href');
+		var id = $(this).data('id');
 
 		$.ajax({
 			url:action,
@@ -13,9 +14,7 @@ $('.remove-btn').click(
 			dataType:'HTML',
 			success:function(response){
 
-				console.log(response);
-
-				window.location.reload();
+				$('.well-'+id).slideUp();
 			},
 			error:function(e){
 				console.log(e);

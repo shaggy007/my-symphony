@@ -49,7 +49,7 @@ class __TwigTemplate_bf57bde37108e98f5b7c85e599fad064f1d0b48f02b9e9df2cabd8c1532
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["post"]) ? $context["post"] : $this->getContext($context, "post")), "getTitle", array(), "method"), "html", null, true);
         echo "
 \t</h3>
-\t<hr>
+\t
 \t<p>
 \t";
         // line 13

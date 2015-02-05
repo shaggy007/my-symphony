@@ -67,11 +67,12 @@ class DefaultController extends Controller
 
     	$response = new Response();
 
-		$response->setContent('<html><body><h1>One Record Deleted</h1></body></html>');
+		$response->setContent('One Record Deleted');
 		$response->setStatusCode(Response::HTTP_OK);
-		$response->headers->set('Content-Type', 'text/html');
+		$response->headers->set('Content-Type', 'application/json');
 
 		// prints the HTTP headers followed by the content
 		$response->send();
+		return $response;
 	}
 }

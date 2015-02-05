@@ -44,7 +44,9 @@ class __TwigTemplate_87cf1deb92baf80712c3ef4c3c72736cb53f42032f7bd03fc490d67029e
         $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) ? $context["posts"] : $this->getContext($context, "posts")));
         foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
             // line 7
-            echo "\t<div class=\"well\">
+            echo "\t<div class=\"well well-";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "getId", array(), "method"), "html", null, true);
+            echo "\">
 \t<h1>
 \t<small class=\"pull-right\">";
             // line 9
@@ -62,7 +64,9 @@ class __TwigTemplate_87cf1deb92baf80712c3ef4c3c72736cb53f42032f7bd03fc490d67029e
 \t<a href=\"";
             // line 13
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("my_symphony_blog_delete", array("id" => $this->getAttribute($context["post"], "getId", array(), "method"))), "html", null, true);
-            echo "\" data-method='delete' class=\"btn btn-xs btn-primary remove-btn\">Remove</a>
+            echo "\" data-id='";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "getId", array(), "method"), "html", null, true);
+            echo "' class=\"btn btn-xs btn-primary remove-btn\">Remove</a>
 \t</p>
 \t</div>
 \t";
@@ -95,6 +99,6 @@ class __TwigTemplate_87cf1deb92baf80712c3ef4c3c72736cb53f42032f7bd03fc490d67029e
 
     public function getDebugInfo()
     {
-        return array (  78 => 19,  74 => 17,  64 => 13,  59 => 11,  55 => 10,  51 => 9,  47 => 7,  43 => 6,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  82 => 19,  78 => 17,  66 => 13,  61 => 11,  57 => 10,  53 => 9,  47 => 7,  43 => 6,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

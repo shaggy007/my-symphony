@@ -4,13 +4,13 @@
 <div class="container">
 <div	class="row">
 	{% for post in posts %}
-	<div class="well">
+	<div class="well well-{{post.getId()}}">
 	<h1>
 	<small class="pull-right">{{post.getCreatedAt()| date('d M, Y')}}</small>
 	{{post.getTitle()| capitalize}}</h1>
 	<p>{{post.getDescription()}}</p>
 	<p>
-	<a href="{{path('my_symphony_blog_delete',{'id':post.getId()})}}" data-method='delete' class="btn btn-xs btn-primary remove-btn">Remove</a>
+	<a href="{{path('my_symphony_blog_delete',{'id':post.getId()})}}" data-id='{{post.getId()}}' class="btn btn-xs btn-primary remove-btn">Remove</a>
 	</p>
 	</div>
 	{% endfor  %}
