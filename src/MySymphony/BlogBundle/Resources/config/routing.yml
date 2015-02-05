@@ -1,3 +1,23 @@
 my_symphony_blog_homepage:
     path:     /blogs
+    methods: [GET]
     defaults: { _controller: MySymphonyBlogBundle:Default:index }
+
+my_symphony_blog_new:
+    path: /blogs/new
+    defaults: { _controller: MySymphonyBlogBundle:Default:new }
+
+my_symphony_blog_store:
+    path: /blogs
+    methods: [POST]
+    defaults: { _controller: MySymphonyBlogBundle:Default:store }
+
+my_symphony_blog_delete:
+    path:     /blogs/{id}
+    methods: [DELETE]
+    defaults: { _controller: MySymphonyBlogBundle:Default:delete }
+
+my_symphony_blog_view:
+    path: /blogs/{id}
+    defaults: { _controller: MySymphonyBlogBundle:Default:post }
+

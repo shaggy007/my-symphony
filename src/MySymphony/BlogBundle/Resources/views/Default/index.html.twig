@@ -1,1 +1,19 @@
-Hello {{ name }}!
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+<div	class="row">
+	{% for post in posts %}
+	<div class="well">
+	<h1>
+	<small class="pull-right">{{post.getCreatedAt()| date('d M, Y')}}</small>
+	{{post.getTitle()| capitalize}}</h1>
+	<p>{{post.getDescription()}}</p>
+	<p>
+	<a href="{{path('my_symphony_blog_delete',{'id':post.getId()})}}" data-method='delete' class="btn btn-xs btn-primary remove-btn">Remove</a>
+	</p>
+	</div>
+	{% endfor  %}
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+	<form action="{{path('my_symphony_blog_store')}}" class="form-horizontal" method="post" >
+		<fieldset>
+			
+			<div class="form-group">
+				<input type="text" name="title" class="form-control" placeholder="Title"/>
+			</div>
+			<div class="form-group">
+				<textarea name="description" class="form-control" placeholder="Description">
+				</textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Post"/>
+			</div>			
+		</fieldset>
+	</form>
+</div>
+{% endblock %}

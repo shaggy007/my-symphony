@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+	<h1 class="page-header">
+	{{ post.getTitle() }}
+	</h1>
+	<p>
+	{{ post.getDescription }}
+	</p>
+</div>
+{% endblock %}
