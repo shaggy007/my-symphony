@@ -65,14 +65,13 @@ class DefaultController extends Controller
     	$em->remove($post);
     	$em->flush(); 
 
-    	$response = new Response(
-    'Content',
-    Response::HTTP_OK,
-    array('content-type' => 'text/html')
-);
-    	$response->prepare($request);
-    	return $response->send();
-    	
-    }
+    	$response = new Response();
 
+		$response->setContent('<html><body><h1>One Record Deleted</h1></body></html>');
+		$response->setStatusCode(Response::HTTP_OK);
+		$response->headers->set('Content-Type', 'text/html');
+
+		// prints the HTTP headers followed by the content
+		$response->send();
+	}
 }

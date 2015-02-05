@@ -2,11 +2,17 @@
 
 {% block body %}
 <div class="container">
-	<h1 class="page-header">
+	<div class="row">
+		<div class="well">
+	<h3>
+	<small class="pull-right">{{post.getCreatedAt | date('d M, Y') }}</small>
 	{{ post.getTitle() }}
-	</h1>
+	</h3>
+	
 	<p>
 	{{ post.getDescription }}
 	</p>
+		</div>
+	</div>
 </div>
 {% endblock %}

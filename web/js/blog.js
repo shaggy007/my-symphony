@@ -12,7 +12,14 @@ $('.remove-btn').click(
 			type:'DELETE',
 			dataType:'HTML',
 			success:function(response){
+
+				console.log(response);
+
 				window.location.reload();
+			},
+			error:function(e){
+				console.log(e);
+				//window.location.reload();
 			}
 		});
 	})
