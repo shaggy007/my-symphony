@@ -1,0 +1,4 @@
+services:
+#    my_symphony_blog.example:
+#        class: MySymphony\BlogBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

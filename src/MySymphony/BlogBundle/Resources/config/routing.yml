@@ -1,0 +1,3 @@
+my_symphony_blog_homepage:
+    path:     /blogs
+    defaults: { _controller: MySymphonyBlogBundle:Default:index }
